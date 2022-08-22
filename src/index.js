@@ -22,7 +22,9 @@ root.render(
         <Route path='/' element={<App />} >
           <Route index element={<Home />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='/item' element={<Item />} />
+          <Route path='/item' element={<Item />} >
+            <Route path='*' element={<Item />} />
+          </Route>
           <Route path='/seller' element={<Seller />} >
             <Route path='*' element={<Seller />} />
           </Route>
